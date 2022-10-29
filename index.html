@@ -8,21 +8,45 @@
   
   <title>Frontend Mentor | Advice generator app</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; color: #ddd; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
+  <div class="container">
+    <div id="advice-card" class="card">
+      <div class="card__number loading">
+        Advice #<span id="advice-number">117</span>
+      </div>
+      <div class="card__text loading">
+        "<span id="advice-text">Don't eat anything your grandparents wouldn't recognise as food.</span>"
+      </div>
+  
+      <div class="card__divider">
+        <img src="./images/pattern-divider-desktop.svg" class="desktop" alt="">
+        <img src="./images/pattern-divider-mobile.svg" class="mobile" alt="">
+      </div>
+  
+      <div id="refresh-advice" class="card__dice">
+        <img src="./images/icon-dice.svg" alt="Spin">
+      </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Anton-Vlad">Vlad Anton</a>.
   </div>
 </body>
+
+<script src="./main.js" defer></script>
 </html>
