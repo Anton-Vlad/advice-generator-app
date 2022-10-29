@@ -15,11 +15,8 @@ const getAdvice = () => {
       .then((data) => {
         adviceNumEl.textContent = data.slip.id;
         adviceTextEl.textContent = data.slip.advice;
-
-
-          adviceNumEl.parentElement.classList.remove('loading')
-          adviceTextEl.parentElement.classList.remove('loading')
-
+        adviceNumEl.parentElement.classList.remove('loading')
+        adviceTextEl.parentElement.classList.remove('loading')
       });
     }, 500)
 }
